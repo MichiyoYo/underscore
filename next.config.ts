@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  experimental: {
+    typedRoutes: true,
+  },
+  images: {
+    domains: ['images.unsplash.com', 'covers.openlibrary.org'],
+  },
 };
 
 export default nextConfig;
