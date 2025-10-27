@@ -39,7 +39,5 @@ export interface Track {
   // Track metadata
   isInstrumental?: boolean;
   mood?: string[];
-
-  // Why this track was selected
   aiRationale?: string;
 }

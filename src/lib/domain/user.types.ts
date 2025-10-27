@@ -1,8 +1,5 @@
 // user & authentication
 
-import { BookAnalysis } from './analysis.types';
-import { Playlist } from './playlist.types';
-
 export interface User {
   id: string;
   email: string;
@@ -53,28 +50,4 @@ export interface UserPreferences {
   autoGeneratePlaylists: boolean;
   instrumentalOnly: boolean;
   playlistLength: 'short' | 'medium' | 'long'; // ~30min, ~1hr, ~2hr
-}
-
-// user's book library
-export type ReadingStatus =
-  | 'want-to-read'
-  | 'currently-reading'
-  | 'finished'
-  | 'did-not-finish';
-
-export interface UserBook {
-  id: string;
-  userId: string;
-  bookId: string;
-  status: ReadingStatus;
-  progress?: number;
-  currentPage?: number;
-  startedAt?: Date;
-  finishedAt?: Date;
-  // AI-generated content
-  analysis?: BookAnalysis;
-  playlists: Playlist[];
-
-  createdAt: Date;
-  updatedAt: Date;
 }
